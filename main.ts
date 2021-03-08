@@ -1,13 +1,12 @@
 input.onButtonPressed(Button.A, function () {
     basic.showString("A")
+    music.playTone(494, music.beat(BeatFraction.Double))
 })
-input.onButtonPressed(Button.AB, function () {
-    basic.showString("AB")
-})
-input.onButtonPressed(Button.B, function () {
-    basic.showString("B")
-})
-basic.showString("Hello!")
+let baseline = input.magneticForce(Dimension.X)
 basic.forever(function () {
-	
+    if (Math.abs(input.magneticForce(Dimension.X)) - baseline > 100) {
+        basic.showIcon(IconNames.Yes)
+    } else {
+        basic.clearScreen()
+    }
 })
