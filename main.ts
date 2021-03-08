@@ -1,28 +1,13 @@
-if (led.point(5, 5)) {
-    music.startMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.ForeverInBackground)
-} else {
-    basic.showArrow(ArrowNames.North)
-}
+input.onButtonPressed(Button.A, function () {
+    basic.showString("A")
+})
+input.onButtonPressed(Button.AB, function () {
+    basic.showString("AB")
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("B")
+})
+basic.showString("Hello!")
 basic.forever(function () {
-    basic.showLeds(`
-        . # # # .
-        # . # . #
-        # . . . #
-        . # . # .
-        . . # . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . # # # .
-        . # . # .
-        . . . . .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . . # . .
-        . . # . .
-        . . # . .
-        . . . . .
-        `)
+	
 })
